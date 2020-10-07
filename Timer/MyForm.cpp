@@ -36,3 +36,8 @@ System::Void Timer1::MyForm::timer1_Tick(System::Object^ sender, System::EventAr
 	
 	return System::Void();
 }
+
+System::Void Timer1::MyForm::проверкаОбновленийToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e)
+{
+	return System::Void();
+}

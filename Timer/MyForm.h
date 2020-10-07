@@ -41,6 +41,10 @@ namespace Timer1 {
 	private: System::Windows::Forms::Timer^ timer1;
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Label^ label3;
+	private: System::Windows::Forms::MenuStrip^ menuStrip1;
+	private: System::Windows::Forms::ToolStripMenuItem^ îáíîâëåíèÿToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ ïğîâåğêàÎáíîâëåíèéToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ ûâûâàToolStripMenuItem;
 	private: System::ComponentModel::IContainer^ components;
 	protected:
 
@@ -65,6 +69,11 @@ namespace Timer1 {
 			this->timer1 = (gcnew System::Windows::Forms::Timer(this->components));
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
+			this->îáíîâëåíèÿToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->ïğîâåğêàÎáíîâëåíèéToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->ûâûâàToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->menuStrip1->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// button1
@@ -132,6 +141,38 @@ namespace Timer1 {
 			this->label3->TabIndex = 5;
 			this->label3->Text = L"label3";
 			// 
+			// menuStrip1
+			// 
+			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->îáíîâëåíèÿToolStripMenuItem });
+			this->menuStrip1->Location = System::Drawing::Point(0, 0);
+			this->menuStrip1->Name = L"menuStrip1";
+			this->menuStrip1->Size = System::Drawing::Size(423, 24);
+			this->menuStrip1->TabIndex = 6;
+			this->menuStrip1->Text = L"menuStrip1";
+			// 
+			// îáíîâëåíèÿToolStripMenuItem
+			// 
+			this->îáíîâëåíèÿToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
+				this->ïğîâåğêàÎáíîâëåíèéToolStripMenuItem,
+					this->ûâûâàToolStripMenuItem
+			});
+			this->îáíîâëåíèÿToolStripMenuItem->Name = L"îáíîâëåíèÿToolStripMenuItem";
+			this->îáíîâëåíèÿToolStripMenuItem->Size = System::Drawing::Size(94, 20);
+			this->îáíîâëåíèÿToolStripMenuItem->Text = L"Î ïğîãğàììå";
+			// 
+			// ïğîâåğêàÎáíîâëåíèéToolStripMenuItem
+			// 
+			this->ïğîâåğêàÎáíîâëåíèéToolStripMenuItem->Name = L"ïğîâåğêàÎáíîâëåíèéToolStripMenuItem";
+			this->ïğîâåğêàÎáíîâëåíèéToolStripMenuItem->Size = System::Drawing::Size(199, 22);
+			this->ïğîâåğêàÎáíîâëåíèéToolStripMenuItem->Text = L"Ïğîâåğêà îáíîâëåíèé";
+			this->ïğîâåğêàÎáíîâëåíèéToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::ïğîâåğêàÎáíîâëåíèéToolStripMenuItem_Click);
+			// 
+			// ûâûâàToolStripMenuItem
+			// 
+			this->ûâûâàToolStripMenuItem->Name = L"ûâûâàToolStripMenuItem";
+			this->ûâûâàToolStripMenuItem->Size = System::Drawing::Size(199, 22);
+			this->ûâûâàToolStripMenuItem->Text = L"Ûâûâà";
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -143,8 +184,12 @@ namespace Timer1 {
 			this->Controls->Add(this->comboBox1);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->button1);
+			this->Controls->Add(this->menuStrip1);
+			this->MainMenuStrip = this->menuStrip1;
 			this->Name = L"MyForm";
 			this->Text = L"MyForm";
+			this->menuStrip1->ResumeLayout(false);
+			this->menuStrip1->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -154,5 +199,6 @@ namespace Timer1 {
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e);
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e);
 	private: System::Void timer1_Tick(System::Object^ sender, System::EventArgs^ e);
+	private: System::Void ïğîâåğêàÎáíîâëåíèéToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e);
 };
 }
