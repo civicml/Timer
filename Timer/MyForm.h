@@ -1,6 +1,6 @@
 #pragma once
 
-namespace Timer {
+namespace Timer1 {
 
 	using namespace System;
 	using namespace System::ComponentModel;
@@ -86,7 +86,6 @@ namespace Timer {
 			this->label1->Size = System::Drawing::Size(46, 17);
 			this->label1->TabIndex = 1;
 			this->label1->Text = L"label1";
-			this->label1->Click += gcnew System::EventHandler(this, &MyForm::label1_Click);
 			// 
 			// comboBox1
 			// 
@@ -151,28 +150,9 @@ namespace Timer {
 
 		}
 #pragma endregion
-		const int hours_in_day = 24;
-		const int mins_in_hour = 60;
-		const int secs_to_min = 60;
-		int i = 7200;
-	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-		i = i * 2;
-	}
-		   
-	private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
 
-	}
-	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-		i = i - 7200;
-	}
-	private: System::Void timer1_Tick(System::Object^ sender, System::EventArgs^ e) {
-	i--;
-	long seconds = i % secs_to_min;
-	long minutes = i / secs_to_min % mins_in_hour;
-	long hours = i / secs_to_min / mins_in_hour;
-	label1->Text = seconds.ToString();
-	label2->Text = minutes.ToString();
-	label3->Text = hours.ToString();
-}
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e);
+	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e);
+	private: System::Void timer1_Tick(System::Object^ sender, System::EventArgs^ e);
 };
 }
