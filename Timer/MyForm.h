@@ -156,7 +156,7 @@ namespace Timer {
 		const int secs_to_min = 60;
 		int i = 7200;
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-		i = i * 1.5f;
+		i = i * 2;
 	}
 		   
 	private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
