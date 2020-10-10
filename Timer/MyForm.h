@@ -299,7 +299,8 @@ namespace Timer1 {
 			this->menuStrip1->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
-
+			//My addons
+			this->comboBox1->SelectedIndex = 0; // Combobox при старте на 0 элементе коллекции
 		}
 #pragma endregion
 
@@ -307,7 +308,6 @@ namespace Timer1 {
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e);
 	private: System::Void timer1_Tick(System::Object^ sender, System::EventArgs^ e);
 	private: System::Void проверкаОбновленийToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e);
-
 	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e);
 };
 }
